@@ -8,9 +8,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'java --version'
-                sh 'gradle --version'
-                sh './gradlew'
+                // sh 'java --version'
+                // sh 'gradle --version'
+                // sh './gradlew'
+                sh 'docker --version'
             }
         }
     }
