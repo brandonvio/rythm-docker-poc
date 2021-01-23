@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh 'java --version'
                 sh 'gradle --version'
+                sh './gradlew'
             }
         }
     }
