@@ -12,6 +12,7 @@ pipeline {
                 // sh 'gradle --version'
                 // sh './gradlew'
                 sh 'docker --version'
+                sh 'docker info'
             }
         }
     }
