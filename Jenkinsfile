@@ -1,10 +1,8 @@
 pipeline {
+    sh 'aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 778477161868.dkr.ecr.us-west-2.amazonaws.com'
     agent {
         docker {
-            alwaysPull true
             image '778477161868.dkr.ecr.us-west-2.amazonaws.com/java-build-dind:latest'
-            registryUrl 'https://778477161868.dkr.ecr.us-west-2.amazonaws.com'
-            registryCredentialsId 'scratch-account-01'
         }
     }
     stages {
