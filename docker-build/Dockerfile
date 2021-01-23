@@ -50,7 +50,7 @@ RUN apk --no-cache add \
     && rm glibc-bin-${GLIBC_VER}.apk \
     && rm -rf /var/cache/apk/*
 
-# WORKDIR /hrp-assets
-COPY hrp-init.sh .
-RUN chmod +x ./hrp-init.sh
+WORKDIR /hrp
+COPY init.sh .
+RUN chmod +x ./init.sh
 # ENTRYPOINT ["sh", "./hrp-init.sh"]
