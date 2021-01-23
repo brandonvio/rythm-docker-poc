@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'java-build-dind:latest' }
+        docker { image '778477161868.dkr.ecr.us-west-2.amazonaws.com/java-build-dind:latest' }
     }
     stages {
         stage('Build') {
