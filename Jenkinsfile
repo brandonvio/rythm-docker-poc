@@ -1,18 +1,16 @@
 pipeline {
     agent {
         docker {
-            image 'docker:dind'
+            image 'public.ecr.aws/k1n6i4c2/java-build-dind-pub:latest'
             args '--privileged'
         }
     }
     stages {
         stage('Build') {
             steps {
-                // sh 'java --version'
-                // sh 'gradle --version'
-                // sh './gradlew'
-                sh 'docker --version'
-                sh 'docker info'
+                sh 'java --version'
+                sh 'gradle --version'
+                sh './gradlew'
             }
         }
     }
