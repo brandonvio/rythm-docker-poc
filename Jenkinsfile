@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'public.ecr.aws/k1n6i4c2/java-build-dind-pub:latest'
+            image 'docker:dind'
             args '--privileged'
         }
     }
